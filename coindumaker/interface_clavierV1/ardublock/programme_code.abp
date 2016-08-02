@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="128 128 128" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1280">
+<PageBlocks>
+<Block genus-name="loop" id="513">
+<Location>
+<X>75</X>
+<Y>166</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="514" connector-kind="socket" connector-type="cmd" init-type="cmd" label="Faire" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="DuinoEDU_Keypad_12_Button" id="514">
+<Location>
+<X>174</X>
+<Y>174</Y>
+</Location>
+<BeforeBlockId>513</BeforeBlockId>
+<AfterBlockId>518</AfterBlockId>
+<Sockets num-sockets="3">
+<BlockConnector con-block-id="515" connector-kind="socket" connector-type="number" init-type="number" label="StartPin #" position-type="single"/>
+<BlockConnector con-block-id="516" connector-kind="socket" connector-type="number" init-type="number" label="EndPin #" position-type="single"/>
+<BlockConnector con-block-id="517" connector-kind="socket" connector-type="number" init-type="number" label="affichage port série" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="ifelse" id="518">
+<Location>
+<X>174</X>
+<Y>252</Y>
+</Location>
+<BeforeBlockId>514</BeforeBlockId>
+<Sockets num-sockets="3">
+<BlockConnector con-block-id="521" connector-kind="socket" connector-type="boolean" init-type="boolean" label="Teste" position-type="single"/>
+<BlockConnector con-block-id="1047" connector-kind="socket" connector-type="cmd" init-type="cmd" label="Alors exécute ..." position-type="single"/>
+<BlockConnector con-block-id="1050" connector-kind="socket" connector-type="cmd" init-type="cmd" label="Sinon éxécute" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="pin-write-digital" id="1050">
+<Location>
+<X>372</X>
+<Y>379</Y>
+</Location>
+<BeforeBlockId>518</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="1051" connector-kind="socket" connector-type="number" init-type="number" label="#" position-type="single"/>
+<BlockConnector con-block-id="1052" connector-kind="socket" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="digital-low" id="1052">
+<Location>
+<X>646</X>
+<Y>406</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1050" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="DuinoEDU_D13" id="1051">
+<Location>
+<X>646</X>
+<Y>382</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1050" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="pin-write-digital" id="1047">
+<Location>
+<X>373</X>
+<Y>284</Y>
+</Location>
+<BeforeBlockId>518</BeforeBlockId>
+<AfterBlockId>535</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="1048" connector-kind="socket" connector-type="number" init-type="number" label="#" position-type="single"/>
+<BlockConnector con-block-id="1049" connector-kind="socket" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="delay" id="535">
+<Location>
+<X>373</X>
+<Y>338</Y>
+</Location>
+<BeforeBlockId>1047</BeforeBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="536" connector-kind="socket" connector-type="number" init-type="number" label="Millisecondes" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="536">
+<Label>5000</Label>
+<Location>
+<X>565</X>
+<Y>341</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="535" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="digital-high" id="1049">
+<Label>HIGH</Label>
+<Location>
+<X>647</X>
+<Y>311</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1047" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="DuinoEDU_D13" id="1048">
+<Location>
+<X>647</X>
+<Y>287</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="1047" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="DuinoEDU_Keypad_Pwd" id="521">
+<Location>
+<X>376</X>
+<Y>255</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="518" connector-kind="plug" connector-type="boolean" init-type="boolean" label="letter" position-type="single"/>
+</Plug>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="522" connector-kind="socket" connector-type="number" init-type="number" label="Mot de passe" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="522">
+<Label>1234</Label>
+<Location>
+<X>688</X>
+<Y>255</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="521" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="DuinoEDU_setSerialInfosOn" id="517">
+<Location>
+<X>464</X>
+<Y>225</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="514" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="DuinoEDU_D8" id="516">
+<Location>
+<X>464</X>
+<Y>201</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="514" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="DuinoEDU_D2" id="515">
+<Location>
+<X>464</X>
+<Y>177</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="514" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>

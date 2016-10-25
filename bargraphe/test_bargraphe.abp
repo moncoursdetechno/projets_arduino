@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="128 128 128" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1280">
+<PageBlocks>
+<Block genus-name="DuinoEDU_Led_Bar" id="520">
+<Location>
+<X>296</X>
+<Y>234</Y>
+</Location>
+<BeforeBlockId>513</BeforeBlockId>
+<Sockets num-sockets="5">
+<BlockConnector con-block-id="521" connector-kind="socket" connector-type="number" init-type="number" label="Clk #" position-type="single"/>
+<BlockConnector con-block-id="522" connector-kind="socket" connector-type="number" init-type="number" label="Dio #" position-type="single"/>
+<BlockConnector con-block-id="523" connector-kind="socket" connector-type="number" init-type="number" label="Niveau" position-type="single"/>
+<BlockConnector con-block-id="524" connector-kind="socket" connector-type="number" init-type="number" label="Min" position-type="single"/>
+<BlockConnector con-block-id="525" connector-kind="socket" connector-type="number" init-type="number" label="Max" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="525">
+<Label>1000</Label>
+<Location>
+<X>508</X>
+<Y>333</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="520" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="524">
+<Label>0</Label>
+<Location>
+<X>508</X>
+<Y>309</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="520" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="523">
+<Label>400</Label>
+<Location>
+<X>508</X>
+<Y>285</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="520" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="DuinoEDU_D3" id="522">
+<Location>
+<X>508</X>
+<Y>261</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="520" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="DuinoEDU_D2" id="521">
+<Location>
+<X>508</X>
+<Y>237</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="520" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="loop" id="513">
+<Location>
+<X>197</X>
+<Y>226</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="520" connector-kind="socket" connector-type="cmd" init-type="cmd" label="Faire" position-type="single"/>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>

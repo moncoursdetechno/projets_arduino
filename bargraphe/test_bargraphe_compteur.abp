@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="128 128 128" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="1280">
+<PageBlocks>
+<Block genus-name="delay" id="534">
+<Location>
+<X>619</X>
+<Y>401</Y>
+</Location>
+<BeforeBlockId>520</BeforeBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="535" connector-kind="socket" connector-type="number" init-type="number" label="Millisecondes" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="535">
+<Label>1000</Label>
+<Location>
+<X>811</X>
+<Y>404</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="534" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="536">
+<Label>i</Label>
+<Location>
+<X>831</X>
+<Y>326</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="520" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="repeat_control" id="529">
+<Location>
+<X>392</X>
+<Y>171</Y>
+</Location>
+<BeforeBlockId>513</BeforeBlockId>
+<Sockets num-sockets="5">
+<BlockConnector con-block-id="530" connector-kind="socket" connector-type="number" init-type="number" label="Nom de la variable" position-type="single"/>
+<BlockConnector con-block-id="531" connector-kind="socket" connector-type="number" init-type="number" label="Début" position-type="single"/>
+<BlockConnector con-block-id="532" connector-kind="socket" connector-type="number" init-type="number" label="Fin" position-type="single"/>
+<BlockConnector con-block-id="533" connector-kind="socket" connector-type="number" init-type="number" label="Incrémenter de" position-type="single"/>
+<BlockConnector con-block-id="520" connector-kind="socket" connector-type="cmd" init-type="cmd" label="Commandes" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="DuinoEDU_Led_Bar" id="520">
+<Location>
+<X>619</X>
+<Y>275</Y>
+</Location>
+<BeforeBlockId>529</BeforeBlockId>
+<AfterBlockId>534</AfterBlockId>
+<Sockets num-sockets="5">
+<BlockConnector con-block-id="521" connector-kind="socket" connector-type="number" init-type="number" label="Clk #" position-type="single"/>
+<BlockConnector con-block-id="522" connector-kind="socket" connector-type="number" init-type="number" label="Dio #" position-type="single"/>
+<BlockConnector con-block-id="536" connector-kind="socket" connector-type="number" init-type="number" label="Niveau" position-type="single"/>
+<BlockConnector con-block-id="524" connector-kind="socket" connector-type="number" init-type="number" label="Min" position-type="single"/>
+<BlockConnector con-block-id="525" connector-kind="socket" connector-type="number" init-type="number" label="Max" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="525">
+<Label>10</Label>
+<Location>
+<X>831</X>
+<Y>374</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="520" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="524">
+<Label>0</Label>
+<Location>
+<X>831</X>
+<Y>350</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="520" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="DuinoEDU_D3" id="522">
+<Location>
+<X>831</X>
+<Y>302</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="520" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="DuinoEDU_D2" id="521">
+<Location>
+<X>831</X>
+<Y>278</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="520" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="533">
+<Location>
+<X>622</X>
+<Y>246</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="529" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="532">
+<Label>10</Label>
+<Location>
+<X>622</X>
+<Y>222</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="529" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="531">
+<Location>
+<X>622</X>
+<Y>198</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="529" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_number" id="530">
+<Label>i</Label>
+<Location>
+<X>622</X>
+<Y>174</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="529" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="loop" id="513">
+<Location>
+<X>293</X>
+<Y>163</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="529" connector-kind="socket" connector-type="cmd" init-type="cmd" label="Faire" position-type="single"/>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>

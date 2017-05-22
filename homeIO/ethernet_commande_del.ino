@@ -25,12 +25,9 @@ void setup(){
   Ethernet.begin(mac, ip);
   pinMode(del, OUTPUT);  
   Serial.begin(9600);
-
 }
 
-void loop(){
- 
-  
+void loop(){  
   EthernetClient client = server.available();
   if (client) //tester s'il y a une requête client
   {
@@ -53,9 +50,7 @@ void loop(){
           else if(readString.indexOf("LED=0") > 0)
           {
             LEDON8 = false;
-          } 
-         
-          
+          }           
           //créer la page HTML
           
           client.println("HTTP/1.1 200 OK");
@@ -63,8 +58,7 @@ void loop(){
           client.println();
           client.println("<html><head>""</head><body>");
           client.println("<h1><FONT color=red>Commander une del via le reseau local</FONT></h1>");//titre en rouge
-             
-          
+                   
           //afficher un sous titre DEL
           client.println("<h2>DEL</h2>");
 
@@ -82,16 +76,13 @@ void loop(){
 
           //CREA I PULSANTI RELATIVI A LED1    
           client.println("<a href='?LED=0'>ETEINDRE</a>");
-          client.println("<a href='?LED=1'>ALLUMER</a>");
-            
-          
-
-         
+          client.println("<a href='?LED=1'>ALLUMER</a>");       
+      
+        
            //SEPARATEUR
           client.println("<br>______________________________<br>");
   
-
-          //balise fin de page HTML
+         //balise fin de page HTML
           client.println("</body></html>");
 
           //SI PREPARA PER UNA NUOVA ISTRUZIONE
